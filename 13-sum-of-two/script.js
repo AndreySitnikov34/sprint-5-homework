@@ -9,8 +9,23 @@
 */
 
 function sumOfTwo(arr, sum) {
-    // Напишите код здесь
-}
+    arr = arr.sort((a, b) => a - b); //Сначала отсортирую массив по возрастанию
+    let start = 0, end = arr.length - 1; //Определю начало и конец массива
+    while (start < end) {
+        let tmpSum = arr[start] + arr[end];
+        if (tmpSum === sum) {
+            start++;
+            end--;
+        } else {
+            if (tmpSum < sum) {
+                start++;
+            } else {
+                end--;
+            }
+        }
+    }
+}// Напишите код здесь
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

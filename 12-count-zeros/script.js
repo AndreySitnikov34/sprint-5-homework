@@ -7,8 +7,19 @@
 */
 
 function countZeros(n) {
-    // Напишите код здесь
-}
+    let result = 0;
+    if (n < 10) return result;
+    for (let i = 10; i <= n; i += 10) {
+        result++;
+        if (i % 100 === 0) {
+            for (let k = i; k < i + 10 && k <= n; k++) {
+                result++;
+            }
+        }
+    }
+    return result;
+}// Напишите код здесь
+
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

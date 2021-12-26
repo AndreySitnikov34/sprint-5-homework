@@ -8,6 +8,9 @@
 */
 
 function uniq(arr) {
+       return arr.sort().filter(function(item, pos, a) {
+        return !pos || item != a[pos - 1];
+    });
     // Напишите код здесь
 }
 
